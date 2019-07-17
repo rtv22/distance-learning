@@ -1,0 +1,27 @@
+<h1>Test list</h1>
+<p *ngIf="!tests"><em>Loading...</em></p>
+
+<button class="editButton" (click)="getEditRows">Edit </button>
+<table class='table table-striped' *ngIf="tests">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let test of tests">
+      <td>{{ test.id }}</td>
+      <td>{{ test.name }}</td>
+      <td><input type="button" value="Pass"></td>
+    </tr>
+  </tbody>
+</table>
+<select [(ngModel)]="id">
+  <option disabled>Выберите id</option>
+  <option *ngFor="let test of tests">
+    {{test.id}}
+  </option>
+</select>
+  <input [(ngModel)]="newName" type="text" class="newNameString" placeholder="Name" size="10">
+  <button (click)="changeNameById()" class="newNameId">Name </button>
