@@ -10,5 +10,6 @@ namespace DistLearn.Models
     public int Id { get; set; }
     public string Name { get; set; }
     public int testId { get; set; }
+    public Answers Answer { get; set; }
   }
 }

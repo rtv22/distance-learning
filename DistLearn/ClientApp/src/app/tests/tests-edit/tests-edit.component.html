@@ -1,19 +1,12 @@
 <h1>Tests questions</h1>
 <p *ngIf="!questions"><em>Loading...</em></p>
 
-<table class='table table-striped' *ngIf="questions">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Test id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let question of questions">
-      <td>{{ question.id }}</td>
-      <td>{{ question.name }}</td>
-      <td>{{ question.testid }}</td>
-    </tr>
-  </tbody>
-</table>
+<body>
+  <ul *ngFor="let question of questions">
+    {{ question.id }}
+    {{ question.name }}
+    {{ question.testid }}
+  </ul>
+</body>
+
+

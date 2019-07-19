@@ -9,11 +9,12 @@
       <th>Name</th>
     </tr>
   </thead>
+
   <tbody>
     <tr *ngFor="let test of tests">
       <td>{{ test.id }}</td>
-      <td>{{ test.name }}</td>
-      <td><input type="button" value="Pass"></td>
+      <td class="nav-link text-dark" [routerLink]='["tests-edit", test.id]'>{{ test.name }}</td>
+        <td><input type="button" value="Pass"></td>
     </tr>
   </tbody>
 </table>

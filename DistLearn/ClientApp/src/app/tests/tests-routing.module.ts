@@ -5,8 +5,8 @@ import { TestsListComponent } from './tests-list/tests-list.component';
 import { TestsEditComponent } from './tests-edit/tests-edit.component';
 
 export const appRoutes: Routes = [
-  { path: 'tests-list', component: TestsListComponent },
-  { path: 'tests-edit', component: TestsEditComponent },
+  { path: '', component: TestsListComponent },
+  { path: 'tests-edit/:id', component: TestsEditComponent },
 ];
 
 @NgModule({

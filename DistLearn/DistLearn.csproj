@@ -24,6 +24,18 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="ClientApp\src\DataBase\ApplicationContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\DataBase\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="DataBase\ApplicationContext.cs" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

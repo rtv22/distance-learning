@@ -19,7 +19,21 @@ namespace DistLearn.Controllers
       return list.GetTestList();
     }
 
-    [HttpPost]
+    [HttpGet("[action]")]
+    public IEnumerable<Question> GetQuestions()
+    {
+      TestService list = new TestService();
+      return list.GetQuestionsList();
+    }
+
+    [HttpGet("[action]")]
+    public IEnumerable<Answers> GetAnswers()
+    {
+      TestService list = new TestService();
+      return list.GetAnswersList();
+    }
+
+    [HttpPost("[action]")]
     public string PostData(string newName, int id)
     {
       List<Test> _testList = new List<Test>();
