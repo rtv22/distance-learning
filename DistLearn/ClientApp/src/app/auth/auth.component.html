@@ -7,10 +7,10 @@
         </span>
 
         <div data-validate="Please enter username">
-          <input type="text" name="username" placeholder="Username">
+          <input type="text" [(ngModel)]="userName" name="username" placeholder="Username">
         </div>
         <div data-validate="Please enter password">
-          <input class="input100" type="text" name="pass" placeholder="Password">
+          <input class="input100" [(ngModel)]="password" type="text" name="pass" placeholder="Password">
         </div>
 
         <div>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="txt2">
-          <button>
+          <button (click) ="logIn()">
             Sign in
           </button>
         </div>

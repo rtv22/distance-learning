@@ -19,11 +19,17 @@ namespace DistLearn.Controllers
       this.auntificationService = auntificationService;
     }
 
-    [HttpPost("hui")]
-    public UserList addUser (UserList model)
+    [HttpPost("addUserInDB")]
+    public User PostAddUser (User model)
     {
       var result = auntificationService.addNewUser(model);
       return result;
+    }
+
+    [HttpPost("logIn")]
+    public User logIn (User model)
+    {
+      return auntificationService.findRegUserInDB(model);
     }
   }
 }

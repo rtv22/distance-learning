@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using DistLearn.Models;
 
-namespace DistLearn.DataBase.User
+namespace DistLearn.DataBase
 {
   public class UserContext : DbContext
   {
-    public DbSet<UserList> Users { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

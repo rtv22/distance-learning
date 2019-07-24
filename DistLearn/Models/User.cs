@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DistLearn.Models
 {
-  public class UserList
+  public class User
   {
     public int Id { get; set; }
     public string Name { get; set; }

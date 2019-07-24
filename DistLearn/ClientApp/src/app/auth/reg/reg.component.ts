@@ -21,7 +21,7 @@ export class RegComponent {
     this.users.name = this.userName;
     this.users.password = this.password;
     console.log(this.users);
-    this.http.post('api/Auth/hui', this.users).subscribe(
+    this.http.post('api/Auth/addUserInDB', this.users).subscribe(
       (val) => {
         if (val == null)
         {

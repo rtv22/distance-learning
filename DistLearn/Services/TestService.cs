@@ -1,4 +1,4 @@
-using DistLearn.DataBase.User;
+using DistLearn.DataBase;
 using DistLearn.Models;
 using System;
 using System.Collections.Generic;
