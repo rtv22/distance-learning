@@ -1,7 +1,7 @@
 <h1>Test list</h1>
-<p *ngIf="!tests"><em>Loading...</em></p>
 
-<button class="editButton" (click)="getEditRows">Edit </button>
+<button class="editButton" (click)="addNewTest()">Add </button>
+<input [(ngModel)]="newTestName" type="text" class="newNameString" placeholder="Add new test" size="20">
 <table class='table table-striped' *ngIf="tests">
   <thead>
     <tr>

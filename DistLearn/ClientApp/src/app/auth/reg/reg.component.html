@@ -1,0 +1,22 @@
+<div class="authMain">
+    <div>
+      <form>
+        <div>
+          <a class="txt2" [routerLink]='["/auth"]'>Go back</a>
+        </div>
+        <span>
+          Registration
+        </span>
+      </form>
+        <div data-validate="Please enter username">
+          <input type="text" [(ngModel)]="userName" name="username" placeholder="Username">
+        </div>
+
+        <div data-validate="Please enter password">
+          <input [(ngModel)]="password" type="text" name="pass" placeholder="Password">
+        </div>
+    <div>
+      <button (click)="getInfo()">Create account</button>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+.txt1 {
+  font-family: Ubuntu-Regular;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.txt2 {
+  font-family: Ubuntu-Regular;
+  font-size: 15px;
+  color: #57b846;
+  line-height: 1.4;
+}
+
+.txt3 {
+  font-family: Ubuntu-Bold;
+  font-size: 15px;
+  color: #57b846;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.authMain{
+  padding: 20%;
+  left: 225px;
+  position: absolute;
+}
