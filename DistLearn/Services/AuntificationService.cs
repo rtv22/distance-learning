@@ -7,27 +7,27 @@ namespace DistLearn.Services
   public interface IAuntificationService
   {
     User addNewUser(User model);
-    User findRegUserInDB(User model);
+    User findUserInDB(User model);
   }
   public class AuntificationService : IAuntificationService
   {
     private UserContext db = new UserContext();
     public User addNewUser(User model)
     {
-      var userInDB = db.Users.Where(s => s.Name == model.Name).FirstOrDefault();
+      var userInDB = db.Users.Where(s => s.Login == model.Login).FirstOrDefault();
       if (userInDB == null)
       {
-        db.Users.Add(new User() { Name = model.Name, Password = model.Password });
+        db.Users.Add(new User() { Login = model.Login, Password = model.Password, Email = model.Email });
         db.SaveChanges();
-        return db.Users.Where(s => s.Name == model.Name).FirstOrDefault();
-    }
+        return db.Users.Where(s => s.Login == model.Login).FirstOrDefault();
+      }
       else
       {
         return null;
       }
     }
-    public User findRegUserInDB(User model){
-      return db.Users.Where(s => s.Name == model.Name && s.Password == model.Password).FirstOrDefault();
-  }
+    public User findUserInDB(User model){
+      return db.Users.Where(s => s.Login == model.Login && s.Password == model.Password).FirstOrDefault();
+    }
   }
 }

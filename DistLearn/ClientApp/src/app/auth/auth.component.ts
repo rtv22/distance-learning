@@ -9,17 +9,17 @@ export class AuthComponent {
   userName: string;
   password: string;
   users: User = {
-    name: "",
+    login: "",
     password: ""
   };
 
   constructor(private http: HttpClient) { }
 
   logIn() {
-    this.users.name = this.userName;
+    this.users.login = this.userName;
     this.users.password = this.password;
     console.log(this.users);
-    this.http.post('api/Auth/logIn', this.users).subscribe(
+    this.http.post('api/Auth/getUser', this.users).subscribe(
       (val: User) => {
         if (val == null) {
           console.log(this.users);
@@ -39,6 +39,7 @@ export class AuthComponent {
 
 interface User {
   id?: number;
-  name: string;
+  email?: string;
+  login: string;
   password: string;
 }

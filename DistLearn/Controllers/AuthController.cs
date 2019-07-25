@@ -12,6 +12,7 @@ namespace DistLearn.Controllers
   [ApiController]
   public class AuthController : Controller
   {
+    User authUser;
     private IAuntificationService auntificationService;
 
     public AuthController(IAuntificationService auntificationService)
@@ -26,10 +27,11 @@ namespace DistLearn.Controllers
       return result;
     }
 
-    [HttpPost("logIn")]
-    public User logIn (User model)
+    [HttpPost("getUser")]
+    public User getUser (User model)
     {
-      return auntificationService.findRegUserInDB(model);
+      authUser = auntificationService.findUserInDB(model);
+      return authUser;
     }
   }
 }

@@ -22,8 +22,26 @@
   text-transform: uppercase;
 }
 
-.authMain{
-  padding: 20%;
-  left: 225px;
-  position: absolute;
+.authButton {
+  width: 183px;
+  height: 35px;
+  display: inline-block;
+  border-radius:5px;
+}
+
+.authButton:hover {
+
+}
+
+.authBody {
+  padding: 10px;
+  display: inline-block;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.txt4 {
+  text-align: center;
 }

@@ -1,22 +1,27 @@
-<div class="authMain">
-    <div>
-      <form>
+<div>
+    <div action="#" class="authBody">
+      <form class="authForm">
         <div>
-          <a class="txt2" [routerLink]='["/auth"]'>Go back</a>
+          <a class="txt2" [routerLink]='["/auth"]'> < - Go back</a>
         </div>
-        <span>
+        <span class="txt4">
           Registration
         </span>
-      </form>
-        <div data-validate="Please enter username">
-          <input type="text" [(ngModel)]="userName" name="username" placeholder="Username">
+
+        <div class="form__field" data-validate="Please enter username">
+          <input type="text" [(ngModel)]="userLogin" name="username" placeholder="Username*" required>
         </div>
 
-        <div data-validate="Please enter password">
-          <input [(ngModel)]="password" type="text" name="pass" placeholder="Password">
+        <div class="form__field" data-validate="Please enter password">
+          <input [(ngModel)]="password" type="text" name="pass" placeholder="Password*" required>
         </div>
-    <div>
-      <button (click)="getInfo()">Create account</button>
-    </div>
+
+        <div data-validate="Please enter e-mail">
+          <input class="form__field" [(ngModel)]="userEmail" type="text" name="pass" placeholder="e-mail">
+        </div>
+        <div>
+          <button class="authButton" (click)="getInfo()">Create account</button>
+        </div>
+      </form>
   </div>
 </div>

@@ -6,20 +6,23 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class RegComponent {
-  userName: string;
+  userLogin: string;
   password: string;
+  userEmail: string;
   users: User = {
-    name: "",
+    login: "",
+    email: "",
     password:""
   };
 
   constructor(private http: HttpClient) { }
 
   getInfo() {
-    console.log(this.userName);
+    console.log(this.userLogin);
     console.log(this.password);
-    this.users.name = this.userName;
+    this.users.login = this.userLogin;
     this.users.password = this.password;
+    this.users.email = this.userEmail;
     console.log(this.users);
     this.http.post('api/Auth/addUserInDB', this.users).subscribe(
       (val) => {
@@ -42,6 +45,7 @@ export class RegComponent {
 
 interface User {
   id?: number;
-  name: string;
+  email: string;
+  login: string;
   password: string;
 }
